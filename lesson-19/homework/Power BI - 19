@@ -1,1 +1,166 @@
+1. What is the difference between Power BI Desktop and Power BI Online Service?
+Power BI Desktop is a free Windows application used to create reports, build data models, and write DAX.
 
+Power BI Online Service (app.powerbi.com) is a cloud-based platform used for publishing, sharing, collaborating, and consuming reports and dashboards.
+
+2. How do you publish a Power BI report from Desktop to the Online Service?
+
+In Power BI Desktop, click Home > Publish, sign in with your Power BI account, and select the workspace where you want to publish.
+
+The report and its associated dataset are uploaded to the Power BI Service.
+
+3. What is a workspace in Power BI? What are the types of workspaces available?
+
+A workspace is a collaborative area in Power BI Service where users can publish, share, and manage content.
+
+Types:
+
+My Workspace – personal space, private to the user.
+
+Shared Workspaces – for teams, collaboration, and app publishing.
+
+4. What is the difference between a workspace and an app in Power BI?
+
+A workspace is a development and collaboration area for creating and managing content.
+
+An app is a read-only packaged version of reports/dashboards, published from a workspace and shared with users for consumption.
+
+5. Explain the different Power BI license types and their limitations.
+License	Features	Limitations
+Free	Build reports in Desktop	Cannot share or publish to workspaces
+Pro	Publish, share, collaborate, RLS	Limited to Pro users or Premium workspaces
+Premium Per User (PPU)	All Pro features + AI + large models	Needs PPU licenses for both creators & consumers
+Premium Capacity	Dedicated cloud capacity for org-wide sharing	Expensive, but enables sharing with Free users
+6. How can you share a report with someone who doesn’t have a Pro license?
+
+Place the report in a Premium workspace (backed by Premium capacity).
+
+Users with a Free license can then view the report without needing Pro.
+
+7. What is a semantic model (dataset) in Power BI, and where is it stored in the service?
+
+A semantic model (previously called a dataset) is the data model containing tables, relationships, measures, and queries.
+
+It is stored in the workspace where the report was published and can be reused in other reports.
+
+8. How does Scheduled Refresh work in Power BI Online Service?
+
+Scheduled refresh automatically updates the dataset at set intervals (e.g., daily/hourly).
+
+You configure it in the Dataset Settings in Power BI Service.
+
+Gateway may be required for on-premises data sources.
+
+9. What is the difference between a dataset and a dataflow in Power BI?
+Term	Description
+Dataset	Model + data + DAX used by a report
+Dataflow	Reusable ETL logic stored in cloud, creates tables using Power Query
+10. When and why would you use a dataflow instead of a dataset?
+
+Use dataflows when:
+
+You want to centralize ETL logic across multiple datasets.
+
+You’re managing large-scale data prep with reusable tables.
+
+You want to store cleaned data in the cloud (using Azure Data Lake Gen2).
+
+11. What are dashboards in Power BI Online? How are they different from reports?
+Feature	Dashboard	Report
+View Type	Single-page summary	Multi-page with visuals
+Source	Pinned visuals from reports	Built in Power BI Desktop
+Interaction	Limited filters, real-time tiles	Fully interactive
+Use Case	KPI summary, executive overview	Detailed analysis
+12. How do you pin a visual to a dashboard from a report?
+
+Open a report in Power BI Service.
+
+Hover over a visual → Click the "Pin" icon → Choose to pin to existing or new dashboard.
+
+13. What is the mobile view in Power BI and why is it useful?
+
+Mobile view customizes how a report or dashboard appears on smartphones or tablets.
+
+Useful for ensuring that content is readable and usable on smaller screens.
+
+14. What is a paginated report in Power BI and when would you use it?
+
+Paginated reports are pixel-perfect, printable reports (like invoices, bills).
+
+Use when:
+
+You need precise layout.
+
+You want to export/print multiple pages.
+
+You’re working with large tabular data.
+
+Requires Power BI Report Builder to design, and Premium/PPU to publish.
+
+15. Can you export reports from Power BI Service to PDF or PowerPoint? How?
+
+Yes. In the report toolbar (in Service), go to:
+
+File > Export > PDF
+
+File > Export > PowerPoint
+
+These exports are static (not interactive).
+
+16. What does “Live Connection” mean in Power BI Service, and how does it work?
+
+Live Connection allows a report to connect directly to a dataset or model (like SSAS or another Power BI dataset).
+
+The data remains in the source; only queries are sent.
+
+Benefits: real-time access, no data duplication.
+
+17. Explain Row-Level Security (RLS) and how it’s applied in Power BI Online.
+
+RLS restricts data visibility based on the user’s role.
+
+You define roles and filters in Power BI Desktop.
+
+In Power BI Service:
+
+Go to Dataset > Security.
+
+Assign users to the roles.
+
+RLS works only for Pro or Premium users.
+
+18. How can you test RLS roles in Power BI Service?
+
+Go to the Dataset > Security in Power BI Service.
+
+Click on a role and select “Test as role” to simulate the report as if you're that user.
+
+19. What are Apps in Power BI and how do you publish one?
+
+A Power BI App is a bundled collection of dashboards, reports, and datasets, published from a workspace.
+
+To publish:
+
+Go to workspace
+
+Click “Publish App”
+
+Set permissions, navigation, and audience
+
+Click Publish
+
+20. What are some key benefits of using the Power BI Online Service in enterprise environments?
+
+Centralized sharing and collaboration
+
+Secure data access with RLS and Azure AD
+
+Scheduled data refreshes
+
+Scalable Premium capacity
+
+Apps for packaging and distributing content
+
+Integration with Teams, Excel, SharePoint, and more
+
+Usage metrics and audit logs for governance
